@@ -21,7 +21,7 @@ void parse_args(int, char**, enum temptype*, double*, unsigned char*);
 
 int main(int argc, char** argv) {
 	if (argc <= 1) {
-		puts("Usage: temp FLAG TEMP");
+		printf("Usage: %s (double)TEMP -{C|F|K}\n", argv[0]);
 		return 1;
 	}
 
@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
 	double init = 0.;
 	parse_args(argc, argv, &WHICH, &init, &unset);
 	if (unset) {
-		puts("Usage: temp FLAG TEMP");
+		printf("Usage: %s (double)TEMP -{C|F|K}\n", argv[0]);
 		return 1;
 	}
 
